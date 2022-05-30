@@ -50,7 +50,9 @@ h1 {
   padding: 30px 0px;
 }
 
-.socialBlock {
+.socialBlock, .person, .ChartColumn{
   display: flex;
   justify-content: space-around;
+  max-width: 80%;
+  margin:  0 auto;
 }

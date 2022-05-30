@@ -8,6 +8,12 @@ import ProfilerData from './data/ProfileData';
 import SocialBlock from './components/SocialBlock';
 import SocialBlockData from './data/SocialBlockData';
 
+import Index from './components/ChartColumn';
+import ChartColumnData from './data/ChartColumnData';
+
+import Persons from './components/Persons';
+import PersonData from './data/PersonData';
+
 function App() {
   return (
     <div>
@@ -52,7 +58,36 @@ function App() {
             })
           }
         </div>
+        <hr/>
 
+        <h1>ChartColumn</h1>
+        <div className='ChartColumn'>
+            {
+              ChartColumnData.map((ChartColumn) => {
+                const {text, total, unit, percentages, colors, days} = ChartColumn
+                return(
+                  <div key={text}>
+                      <Index text={text} total={total} unit={unit} percentages={percentages} colors={colors} days={days}/>
+                  </div>
+                );
+              })
+            }
+        </div>
+        <hr/>
+
+        <h1>Person</h1>
+        <div className='person'>
+          {
+            PersonData.map((person, index) => {
+              const {avata, infors,contacts} = person
+              return (
+                <div key={index}>
+                  <Persons avata={avata} infors={infors} contacts={contacts}/>
+                </div>
+              )
+            })
+          }
+        </div>
     </div>
   );
 }
