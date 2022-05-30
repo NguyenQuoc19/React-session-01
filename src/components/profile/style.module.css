@@ -1,0 +1,58 @@
+.wrapper {
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    border-radius: 4px;
+    
+}
+
+.icon i {
+    font-size: 15px;
+    color: white;
+    margin: 0 auto;
+}
+
+.name {
+    width: 50%;
+}
+
+.name p {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    color: #838685;
+    text-transform: uppercase;
+}
+
+.right {
+    width: 68%;
+    height: 14px;
+    border-radius: 3px;
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.055);
+    background-color: #83868511;
+}
+
+.percentage {
+    height: 100%;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+
+}

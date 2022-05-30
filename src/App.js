@@ -1,23 +1,58 @@
-import logo from './logo.svg';
 import './App.css';
+import ChartBar from './components/chartbar';
+import ChartBarData from './data/ChartBarData';
+
+import Profiler from './components/profile';
+import ProfilerData from './data/ProfileData';
+
+import SocialBlock from './components/SocialBlock';
+import SocialBlockData from './data/SocialBlockData';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+        <h1>ChartBar</h1>
+        {
+          ChartBarData.map((chartbar) => {
+            const {text, color1, colors, percentage} = chartbar;
+            return (
+              <div key={text}>
+                  <ChartBar text={text} color1={color1} colors={colors} percentage={percentage}/>
+              </div>
+            );
+          })
+        }
+        <hr/>
+
+        <h1>Profile</h1>
+        <div className='profile'>
+          {
+            ProfilerData.map((profile) => {
+              const {nameIcon, name, percentage, colors} = profile;
+              return (
+                <div key={name}>
+                  <Profiler nameIcon={nameIcon} name={name} colors={colors} percentage={percentage}/>
+                </div>
+              );
+            })
+          }
+        </div>
+        <hr/>
+
+        <h1>Social Block</h1>
+        <div className='socialBlock'>
+          {
+            SocialBlockData.map((socialBlock) => {
+              const {text, color, iconName, total, unit} = socialBlock
+              return(
+                <div key={text}>
+                    <SocialBlock text={text} color={color} iconName={iconName} total={total} unit={unit}/>
+                </div>
+              );
+            })
+          }
+        </div>
+
     </div>
   );
 }

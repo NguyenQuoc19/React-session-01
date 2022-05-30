@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,22 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+h1 {
+  text-align: center;
+}
+
+.profile {
+  width: 750px;
+  border-radius: 6px;
+  box-shadow: 1px 3px 0px 1px rgba(0, 0, 0, 0.219);
+  margin: 0 auto;
+  border: 1px solid rgba(0, 0, 0, 0.082);
+  padding: 30px 0px;
+}
+
+.socialBlock {
+  display: flex;
+  justify-content: space-around;
 }
